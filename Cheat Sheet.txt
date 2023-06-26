@@ -1,0 +1,45 @@
+NOTES:
+Origin url = project url of your account
+upstream url = url from where you have forked the project
+1 Branch can open only 1 PR, therefore when contributing to others project, for each commit create a new branch.
+
+git init
+git status
+git add - > Adds file to staging area
+git commit -m "......" -> Save the history
+
+git restore --staged FILENAME -> remove from staging area
+git log -> Check all the history / all the commits that were made
+git reset HashId -> remove all the commits above it
+
+git stash
+git stash pop -> all the changes made, files added etc get it back into the unstaged area
+git stash clear -> delete everything from stash
+
+
+LINK LOCAL TO REMOTE PERSONAL REPOSITORY:
+git remote add origin url.... -> adding the url of the project linked to your account in the variable origin
+git remote -v -> display all the urls attached to the local folder
+git push origin master - > push all the changes the url origin
+
+
+BRANCHES:
+git branch feature1
+git merge feature1 -> merges feature1 branch with the main branch
+git checkout feature1 -> HEAD now points to feature1 branch
+
+
+WORKING WITH EXISTING PROJECTS:
+1. Fork the project
+2. git clone url....
+3. git remote add upstream url... -> adding the url of the project which you have forked to your account in the variable upstrream
+4. git branch feature1
+5. git checkout feature1
+6. git add .
+7. git commmit -m ""
+8. git push origin feature1
+9. then go to your github project repository and create a pull request 
+
+You will have to force push to remove a commit from PR
+
+git pull upstream main -> To make the branch in sync with the upstream url , then git push origin main
